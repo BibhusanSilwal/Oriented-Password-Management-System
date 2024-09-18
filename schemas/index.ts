@@ -1,7 +1,5 @@
 import * as z from "zod"
 
-import React from 'react'
-
 export const LoginSchema = z.object({
     email:z.string().email({
         message:"Email is required"
