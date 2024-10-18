@@ -1,4 +1,15 @@
+import NextAuth from "next-auth"
+import {
+  DEFAULT_LOGIN_REDIRECT,
+  apiAuthPrefix,
+  authRoutes,
+  publicRoutes
+} from "@/routes"
+
+
+import authConfig from "./auth.config"
 import { auth} from "@/auth"
+
 export default auth((req)=>{
     console.log("Route ",req.nextUrl.pathname)
 })

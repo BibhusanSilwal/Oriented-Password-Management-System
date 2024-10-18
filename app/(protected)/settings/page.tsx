@@ -1,10 +1,11 @@
-type Props = {
- 
-}
-export const Settings = ({}: Props) => {
+import { auth } from "@/auth";
+const SettingsPage =async () => {
+    const session = await auth();
     return ( 
-        <div>
-            hi
-        </div>
+    <div>
+        {JSON.stringify(session)}
+    </div>
     );
 }
+ 
+export default SettingsPage;
